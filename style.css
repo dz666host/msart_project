@@ -1,0 +1,417 @@
+html{
+	scroll-behavior: smooth;
+}
+
+/*back to top*/
+#myBtn {
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 30px;
+	z-index: 99;
+	font-size: 15px;
+	border: none;
+	outline: none;
+	background-color: red;
+	color: white;
+	cursor: pointer;
+	padding: 15px;
+	border-radius: 4px;
+}
+
+#myBtn img{
+	width: 30px;
+	height: 30px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+/*end back to top*/
+
+/*whatsapp button*/
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:90px;
+	right:35px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  	font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  	z-index:100;
+}
+
+.my-float{
+	margin-top:16px;
+}
+
+.icon-bar {
+	z-index: 100;
+	position: fixed;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.icon-bar a {
+	display: block;
+	text-align: center;
+	padding: 16px;
+	transition: all 0.3s ease;
+	color: white;
+	font-size: 20px;
+}
+
+.icon-bar a:hover {	
+	background-color: #000;
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.whatsapp{
+	background: #25d366;
+	color: white;
+}
+
+/*whatsapp button*/
+
+
+.navbar-light{
+	background: #404856;
+	box-shadow: 0px 1px 7px rgba(0,0,0,.75);
+	border-bottom: none;
+}
+
+hr{
+	width: 50%;
+	border-bottom: 3px solid #333;
+}
+
+/*awal home*/
+.bungkus-1 .naMA{
+	opacity: 0;
+	transform: translate(0, -40px);
+	transition: .5s;
+}
+
+.bungkus-1 .naMA.muncul{
+	opacity: 1;
+	transform: translate(0,0);
+}
+
+.bungkus-1{
+    position: relative;
+}
+
+.header-1{
+    background:  #B8B8B8;
+    /*margin-top: -50px;*/
+    background-image: url('me.jpg');
+    transition: 1s;
+    background-position: center;
+    width: 100%;
+    height: 550px;
+    display: inline-block;
+    filter: blur(2px);
+    position: relative;
+    margin-top: 7%;
+    background-repeat: no-repeat;
+}
+.name{
+	background: transparent;
+    color: white;
+    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    /*box-shadow: 3px 3px 20px rgba(255, 255, 255, .7);*/
+    position: absolute;
+}
+
+.name h1{
+    font-size: 100px;
+    color: white;
+}
+
+.name p{
+    font-size: 15px;
+    color: white;
+}
+
+@media screen and (max-width: 600px) {
+		.name h1{
+	    font-size: 50px;
+	}
+}
+/*end home*/
+
+/*awal time line*/
+
+.bungkus-2 .conn{
+	opacity: 0;
+	transform: translate(0, -40px);
+	transition: .5s;
+}
+
+.bungkus-2 .conn.muncul{
+	opacity: 1;
+	transform: translate(0,0);
+}
+
+.header-2,.bungkus-2{
+	background: #474e5d;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+	background-color: #474e5d;
+	position: relative;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+	content: '';
+	position: absolute;
+	width: 6px;
+	background-color: white;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	margin-left: -3px;
+}
+
+/* conn around content */
+.conn {
+	padding: 10px 40px;
+	position: relative;
+	background-color: inherit;
+	width: 50%;
+}
+
+/* The circles on the timeline */
+.conn::after {
+	content: '';
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	right: -17px;
+	background-color: white;
+	border: 4px solid #FF9F55;
+	top: 15px;
+	border-radius: 50%;
+	z-index: 1;
+}
+
+/* Place the conn to the left */
+.left {
+	left: 0;
+}
+
+/* Place the conn to the right */
+.right {
+	left: 50%;
+}
+
+/* Add arrows to the left conn (pointing right) */
+.left::before {
+	content: " ";
+	height: 0;
+	position: absolute;
+	top: 22px;
+	width: 0;
+	z-index: 1;
+	right: 30px;
+	border: medium solid white;
+	border-width: 10px 0 10px 10px;
+	border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right conn (pointing left) */
+.right::before {
+	content: " ";
+	height: 0;
+	position: absolute;
+	top: 22px;
+	width: 0;
+	z-index: 1;
+	left: 30px;
+	border: medium solid white;
+	border-width: 10px 10px 10px 0;
+	border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for conns on the right side */
+.right::after {
+	left: -16px;
+}
+
+/* The actual content */
+.content {
+	padding: 20px 30px;
+	background-color: white;
+	position: relative;
+	border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 31px;
+  }
+  
+  /* Full-width conns */
+  .conn {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .conn::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+  left: 15px;
+  }
+  
+  /* Make all right conns behave like the left ones */
+  .right {
+  left: 0%;
+  }
+}
+/*end timeline*/
+
+
+
+
+/*awal portfolio*/
+
+.myportfolio a{
+	cursor: unset;
+}
+
+.myportfolio{
+	overflow: hidden;
+	background: linear-gradient(to right, #673AB7, #596C84);
+	padding-top: 20px;
+}
+
+.myportfolio img{
+	width: 100%;
+	box-shadow: 0px 0px 0px rgba(255,255,255,.75);
+	border: 3px solid white;
+	transition: .5s;
+	margin-bottom: 10px;
+}
+
+.myportfolio img:hover{
+	width: 100%;
+	box-shadow: 1px 1px 15px rgba(255,255,255,.75);
+	border: 3px solid white;
+}
+
+.myportfolio #heightt img{
+	height: 470px;
+}
+
+.myportfolio .thumbnail{
+	opacity: 0;
+	transform: translate(0, -40px);
+	transition: .5s;
+}
+
+.myportfolio .thumbnail.muncul{
+	opacity: 1;
+	transform: translate(0,0);
+}
+
+.myportfolio #heighttt img{
+	height: 350px;
+}
+/*end portfolio*/
+
+
+/*awal card*/
+.card{
+	box-shadow: 1px 1px 10px rgba(173, 173, 173,.75);
+	margin-bottom: 30px;
+}
+
+.card-1{
+	margin-left: 30%;
+}
+
+.card-2{
+	margin-left: 15%;
+}
+
+
+@media screen and (max-width: 600px) {
+  .card-1 {
+  margin-left: 70px;
+  }
+
+.alert{
+	width: 70%;
+}
+
+@media screen and (max-width: 600px) {
+  .alert {
+  margin-left: 70px;
+}
+
+.ket{
+	width: 60%;
+}
+
+.allCards .card{
+	opacity: 0;
+	transform: translate(0, -40px);
+	transition: .5s;
+}
+
+.allCards .card.muncul{
+	opacity: 1;
+	transform: translate(0,0);
+}
+
+/*end card*/
+
+
+/*awal footer*/
+footer{
+	text-align: center;
+	height: 70px;
+	line-height: 70px;
+	background: #252525;
+	color: white;
+}
+
+footer a{
+	text-decoration: none;
+	color: lightblue;
+}
+
+footer a:hover{
+	text-decoration: none;
+	color: cyan;
+}
+/*end footer*/
